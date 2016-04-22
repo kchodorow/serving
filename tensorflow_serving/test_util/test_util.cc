@@ -24,8 +24,9 @@ namespace test_util {
 
 string TestSrcDirPath(const string& relative_path) {
   return tensorflow::io::JoinPath(
-      tensorflow::io::JoinPath(getenv("TEST_SRCDIR"),
-                               "tensorflow_serving"),
+      tensorflow::io::JoinPath(
+          getenv("TEST_SRCDIR"),
+          "org_tensorflow_serving/tensorflow_serving"),
       relative_path);
 }
 
